@@ -2,9 +2,9 @@
 
 namespace Knownhost\SCP;
 
+use Knownhost\SCP\Commands\SCPCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Knownhost\SCP\Commands\SCPCommand;
 
 class SCPServiceProvider extends PackageServiceProvider
 {

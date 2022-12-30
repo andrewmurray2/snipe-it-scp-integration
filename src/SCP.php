@@ -10,7 +10,7 @@ class SCP
     /**
      * Guzzle Client
      *
-     * @var Client|null $client
+     * @var Client|null
      */
     protected ?Client $client;
 
@@ -43,7 +43,7 @@ class SCP
 
         // Initialize the client.
         $this->client = new Client([
-            'base_url' => config('synergycp.use_ssl') ? "https://" . config('synergycp.host') : "http://" . config('synergycp.host'),
+            'base_url' => config('synergycp.use_ssl') ? 'https://'.config('synergycp.host') : 'http://'.config('synergycp.host'),
             'query' => [
                 'key' => config('synergycp.auth.api_key'),
             ],
