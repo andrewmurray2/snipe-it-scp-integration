@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Knownhost\SCP\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class SCPCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'synergycp';
 
     public $description = 'My command';
 
