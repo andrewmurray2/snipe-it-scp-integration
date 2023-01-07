@@ -43,7 +43,7 @@ class SCP
 
         // Initialize the client.
         $this->client = new Client([
-            'base_uri' => config('synergycp.use_ssl') ? 'https://' . config('synergycp.host') : 'http://' . config('synergycp.host'),
+            'base_uri' => config('synergycp.use_ssl') ? 'https://'.config('synergycp.host') : 'http://'.config('synergycp.host'),
             'query' => [
                 'key' => config('synergycp.auth.api_key'),
             ],
@@ -82,11 +82,11 @@ class SCP
     {
         $config = config('synergycp');
 
-        if (!is_bool($config['use_ssl'])) {
+        if (! is_bool($config['use_ssl'])) {
             throw new RuntimeException('SCP_USE_SSL must be a boolean value.');
         }
 
-        if (!is_bool($config['ssl_verify'])) {
+        if (! is_bool($config['ssl_verify'])) {
             throw new RuntimeException('SCP_SSL_VERIFY must be a boolean value.');
         }
 
@@ -94,7 +94,7 @@ class SCP
 
         // Check that the host is a valid URL.
         // We're expecting something like api.<domain>.<tld>
-        if (!filter_var($scheme . '://' . $config['host'], FILTER_VALIDATE_URL)) {
+        if (! filter_var($scheme.'://'.$config['host'], FILTER_VALIDATE_URL)) {
             throw new RuntimeException('SCP_HOST must be a valid URL.');
         }
 

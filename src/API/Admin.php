@@ -28,8 +28,7 @@ class Admin extends \Knownhost\SCP\SCP
      *
      * @see https://synergycp.com/#admins
      *
-     * @param int $id
-     *
+     * @param  int  $id
      * @return Collection
      *
      * @throws GuzzleException
@@ -47,11 +46,10 @@ class Admin extends \Knownhost\SCP\SCP
      *
      * @see https://synergycp.com/#admins
      *
-     * @param string $email
-     * @param string $password
-     * @param string|null $username
-     * @param bool $receive_copies
-     *
+     * @param  string  $email
+     * @param  string  $password
+     * @param  string|null  $username
+     * @param  bool  $receive_copies
      * @return Collection
      *
      * @throws GuzzleException
@@ -65,7 +63,7 @@ class Admin extends \Knownhost\SCP\SCP
             'receive_copies' => $receive_copies,
         ];
 
-        if (!empty($username)) {
+        if (! empty($username)) {
             $params['username'] = $username;
         }
 
@@ -81,11 +79,10 @@ class Admin extends \Knownhost\SCP\SCP
      *
      * @see https://synergycp.com/#admins
      *
-     * @param int $id
-     * @param string|null $email
-     * @param string|null $password
-     * @param bool|null $receive_copies
-     *
+     * @param  int  $id
+     * @param  string|null  $email
+     * @param  string|null  $password
+     * @param  bool|null  $receive_copies
      * @return Collection
      *
      * @throws GuzzleException
@@ -95,11 +92,11 @@ class Admin extends \Knownhost\SCP\SCP
     {
         $params = [];
 
-        if (!empty($email)) {
+        if (! empty($email)) {
             $params['email'] = $email;
         }
 
-        if (!empty($password)) {
+        if (! empty($password)) {
             $params['password'] = $password;
         }
 
@@ -124,8 +121,7 @@ class Admin extends \Knownhost\SCP\SCP
      *
      * @see https://synergycp.com/#admins
      *
-     * @param int $id
-     *
+     * @param  int  $id
      * @return Collection
      *
      * @throws GuzzleException
@@ -143,8 +139,7 @@ class Admin extends \Knownhost\SCP\SCP
      *
      * @see https://synergycp.com/#admins
      *
-     * @param int $id
-     *
+     * @param  int  $id
      * @return Collection
      *
      * @throws GuzzleException
@@ -162,9 +157,8 @@ class Admin extends \Knownhost\SCP\SCP
      *
      * @see https://synergycp.com/#admins
      *
-     * @param int $id
-     * @param array $permissions
-     *
+     * @param  int  $id
+     * @param  array  $permissions
      * @return Collection
      *
      * @throws GuzzleException
