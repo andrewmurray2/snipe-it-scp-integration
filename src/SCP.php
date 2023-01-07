@@ -3,6 +3,8 @@
 namespace Knownhost\SCP;
 
 use GuzzleHttp\Client;
+use Knownhost\SCP\API\Admin as AdminAPI;
+use Knownhost\SCP\API\Client as ClientAPI;
 use RuntimeException;
 
 class SCP
@@ -103,4 +105,25 @@ class SCP
             throw new RuntimeException('SCP_API_KEY must be 50 characters long.');
         }
     }
+
+    /**
+     * Returns the Admin API Class.
+     *
+     * @return AdminAPI
+     */
+    public function admin(): AdminAPI
+    {
+        return new AdminAPI;
+    }
+
+    /**
+     * Returns the Client API Class.
+     *
+     * @return ClientAPI
+     */
+    public function client(): ClientAPI
+    {
+        return new ClientAPI;
+    }
+
 }
