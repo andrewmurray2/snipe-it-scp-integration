@@ -23,5 +23,5 @@ return [
      */
     'auth' => [
         'api_key' => env('SCP_API_KEY'),
-    ]
+    ],
 ];
